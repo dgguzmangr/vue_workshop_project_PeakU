@@ -8,22 +8,10 @@
     <h2>Directiva v-for</h2>
 
     <ul>
-      <li v-for="(fruta, index) in frutas" :key="index">
-        {{ index }} - {{ fruta.nombre }} - {{ fruta.cantidad }}
-          <p v-show="fruta.cantidad >= 5">
-            Hay 5 o más
-          </p>
-
-          <p v-show="fruta.cantidad <= 5">
-            Hay 5 o menos
-          </p>
+      <li v-for="(job, index) in JobListing" :key="index">
+        {{ job.jobTitle }} - {{ job.company }} {{ job.salary }}
       </li>
     </ul>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-    </p>
-      
   </div>
 </template>
 
@@ -54,7 +42,64 @@ export default {
           nombre: "Banano",
           cantidad: 5
         }
-    ]
+      ],
+
+      JobListing: [
+        {
+          jobTitle: "Ingeniero de datos",
+          company: "Fourier Analytics",
+          salary: "$ 1.4M COP"
+        },
+        {
+          jobTitle: "Devops",
+          company: "Aventior Inc",
+          salary: "$ 1.2M COP"
+        },
+        {
+          jobTitle: "Analista QA",
+          company: "Be Bolder",
+          salary: "$ 6.1M COP"
+        },
+        {
+          jobTitle: "Auxiliar de odontología",
+          company: "WOWaligners SAS",
+          salary: "$ 1.2M COP"
+        },
+        {
+          jobTitle: "Desarrollador",
+          company: "Zona Virtual",
+          salary: "$ 3.8M COP"
+        },
+        {
+          jobTitle: "Auxiliar administrativa y de logística",
+          company: "Magno Chocolates",
+          salary: "$ 1.2M COP"
+        },
+        {
+          jobTitle: "Ingeniero Devops bilingue",
+          company: "PeakU",
+          salary: "$ 6K USD"
+        },
+        {
+          jobTitle: "Gerente comercial de licitaciones con el estado",
+          company: "Confidencial",
+          salary: "$ 7M COP"
+        },
+      ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
   }
 }
