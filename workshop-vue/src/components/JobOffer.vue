@@ -9,12 +9,12 @@
 
       <div class="col-md-11 col-9">
         <div class="row align-items-center">
-          {{ job.jobTitle }}
+          <a>{{ job.jobTitle }}</a>
         </div>
       </div>
 
       <div class="row pl-md-2 mt-1 flex column flex-md-row">
-        <div class="text-truncate text-capitaze col">
+        <div class="text-truncate text-capitalize col">
           <svg data-v-03976c49="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" aria-label="building" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-building b-icon bi"><g data-v-03976c49=""><path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"></path><path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"></path></g></svg>
           {{ job.company }}
         </div>
@@ -42,61 +42,61 @@
   </div>
 </template>
   
-  <script>
-  export default {
-    name: 'JobOffer',
-    data() {
-      return {
-        JobListing: [
-          {
-            img: "./assets/ss.png",
-            jobTitle: "Regente de farmacia",
-            company: "OFFIMÉDICAS S.A",
-            city: "Santiago de Cali",
-            salary: "$ 1.9M COP",
-            vacant: 10,
-            date: "undefined"
-          },
-          {
-            img: "./assets/descarga.png",
-            jobTitle: "Ingeniero de datos",
-            company: "Fourier Analytics",
-            city: "Remoto en Colombia",
-            salary: "$ 6.5M - 8M COP",
-            vacant: 1,
-            date: "undefined"
-          },
-          {
-            img: "./assets/WhatsApp_Image_2022-11-30_at_3.30.37_PM.jpeg",
-            jobTitle: "Devops",
-            company: "Aventior Inc",
-            city: "Remoto",
-            salary: "$ 4M - 6.1M COP",
-            vacant: 1,
-            date: "undefined"
-          },
-        ]
-      }
+<script>
+export default {
+  name: 'JobOffer',
+  data() {
+    return {
+      JobListing: [
+        {
+          img: "./assets/ss.png",
+          jobTitle: "Regente de farmacia",
+          company: "OFFIMÉDICAS S.A",
+          city: "Santiago de Cali",
+          salary: "$ 1.9M COP",
+          vacant: "10",
+          date: new Date().toLocaleString(),
+        },
+        {
+          img: "./assets/descarga.png",
+          jobTitle: "Ingeniero de datos",
+          company: "Fourier Analytics",
+          city: "Remoto en Colombia",
+          salary: "$ 6.5M - 8M COP",
+          vacant: "1",
+          date: new Date().toLocaleString(),
+        },
+        {
+          img: "./assets/WhatsApp_Image_2022-11-30_at_3.30.37_PM.jpeg",
+          jobTitle: "Devops",
+          company: "Aventior Inc",
+          city: "Remoto",
+          salary: "$ 4M - 6.1M COP",
+          vacant: "1",
+          date: new Date().toLocaleString(),
+        },
+      ]
     }
   }
-  </script>
-  
-  <!-- Add "scoped" attribute to limit CSS to this component only -->
-  <style scoped>
-  h4 {
-    font-weight: bold;
-    color: #343a40;
-    margin: 40px 0 0;
-  }
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  a {
-    color: #42b983;
-  }
-  </style>
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+h4 {
+  font-weight: bold;
+  color: #343a40;
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+</style>

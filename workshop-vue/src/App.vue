@@ -21,6 +21,7 @@
                 </section>
             </nav>
     <JobOffer/>
+    
   </div>
 </template>
 
@@ -31,7 +32,7 @@ export default {
   name: 'App',
   components: {
     JobOffer
-  }
+}
 }
 </script>
 
