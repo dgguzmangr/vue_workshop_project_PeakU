@@ -1,6 +1,6 @@
 <template>
   <div class="mx-auto container-fluid">
-    <div  v-for="(job, index) in JobListing" :key="index" class="card-body row d-flex justify_content-center align-items-center text-center p-3  m-3 border border-muted rounded">
+    <div  v-for="(job, index) in JobListing" :key="index" class="jobpost card-body row d-flex justify_content-center align-items-center text-center p-3  m-3 border border-muted rounded">
       <div class="justify-content-center align-items-center col-md-1 col-3">
         <div style="width: 70px; height: 70px" class="rounded">
           <img :src="job.img" alt="company logo" width="70" height="70" class="rounded">
@@ -8,7 +8,7 @@
       </div>
       <div class="col-md-11 col-9 row align-items-start">
         <div class="row align-items-center ">
-          <a class="text-dark d-inline d-md-inline-flex fw-bold text-decoration-none">{{ job.jobTitle }}</a>
+          <a href="" class="text-dark d-inline d-md-inline-flex fw-bold text-decoration-none">{{ job.jobTitle }}</a>
         </div>
         <div class="jobitems row pl-md-2 mt-1 flex column flex-md-row">
           <div class="text-truncate text-capitalize col ">
@@ -115,5 +115,9 @@ p {
 }
 .jobitems {
   text-align: left;
+}
+
+.jobpost:hover {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Agregar una sombra cuando se pasa el ratón */
 }
 </style>
