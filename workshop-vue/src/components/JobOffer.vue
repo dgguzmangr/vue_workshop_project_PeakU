@@ -1,6 +1,6 @@
 <template>
-  <div class="mx-auto container-fluid rounded">
-    <div  v-for="(job, index) in JobListing" :key="index" class="card-body row d-flex justify_content-center align-items-center text-center p-3">
+  <div class="mx-auto container-fluid">
+    <div  v-for="(job, index) in JobListing" :key="index" class="card-body row d-flex justify_content-center align-items-center text-center p-3  m-3 border border-muted rounded">
       <div class="justify-content-center align-items-center col-md-1 col-3">
         <div style="width: 70px; height: 70px" class="rounded">
           <img :src="job.img" alt="company logo" width="70" height="70" class="rounded">
@@ -84,6 +84,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+:root {
+  --borderColor: #212529;
+}
+
+
 h4 {
   font-weight: bold;
   color: #343a40;
