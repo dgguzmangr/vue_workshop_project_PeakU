@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto container-fluid">
+  <div class="mx-auto container-fluid bg-light">
     <div  v-for="(job, index) in JobListing" :key="index" class="jobpost card-body row d-flex justify_content-center align-items-center text-center p-3  m-3 border border-muted rounded">
       <div class="justify-content-center align-items-center col-md-1 col-3">
         <div style="width: 70px; height: 70px" class="rounded">
