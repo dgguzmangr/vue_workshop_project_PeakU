@@ -2,7 +2,7 @@
   <div id="app">
     <nav class="container-fluid">
                 <!--section typeA (four columns, each colum img[align items center] + <p> under the img[align items left] )-->
-                <section class="row d-flex justify-content-center align-items-center py-3" style="background-color: var(--white);">
+                <section class="row d-flex justify-content-center align-items-center text-center py-3" style="background-color: var(--white);">
                     <div class="col-1 text-left">
                         <a href="index.html"><img loading="lazy" src="./assets/logo-blue.png" alt="PeakU"></a>
                     </div>
