@@ -1,9 +1,9 @@
 <template>
-  <div class="mx-auto container-fluid">
+  <div class="mx-auto container-fluid rounded">
     <div  v-for="(job, index) in JobListing" :key="index" class="card-body row d-flex justify_content-center align-items-center text-center p-3">
       <div class="justify-content-center align-items-center col-md-1 col-3">
         <div style="width: 70px; height: 70px" class="rounded">
-          <img v-bind:src="job.img" alt="company logo">
+          <img :src="job.img" alt="company logo" width="70" height="70" class="rounded">
         </div>
       </div>
       <div class="col-md-11 col-9 row align-items-start">
@@ -44,7 +44,7 @@ export default {
     return {
       JobListing: [
         {
-          img: "./jobOffer_img/assets/ss.png",
+          img: "https://peaku.co/img/company.svg",
           jobTitle: "Regente de farmacia",
           company: "OFFIMÉDICAS S.A",
           city: "Santiago de Cali",
@@ -53,7 +53,7 @@ export default {
           date: "2023-02-25",
         },
         {
-          img:"./jobOffer_img/assets/descarga.png",
+          img:"https://s3-us-west-2.amazonaws.com/peaku-public/business/Company/logo_url/40668/descarga.png",
           jobTitle: "Ingeniero de datos",
           company: "Fourier Analytics",
           city: "Remoto en Colombia",
@@ -62,7 +62,7 @@ export default {
           date: "2023-03-25",
         },
         {
-          img:"./jobOffer_img/assets/WhatsApp_Image_2022-11-30_at_3.30.37_PM.jpeg",
+          img:"https://s3-us-west-2.amazonaws.com/peaku-public/business/Company/logo_url/70785/Aventior_Inc.jpg",
           jobTitle: "Devops",
           company: "Aventior Inc",
           city: "Remoto",

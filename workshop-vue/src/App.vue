@@ -21,6 +21,8 @@
                 </section>
             </nav>
     <JobOffer/>
+
+
     
   </div>
 </template>
