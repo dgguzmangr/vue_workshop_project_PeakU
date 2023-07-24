@@ -2,7 +2,7 @@
   <div class="mx-auto container-fluid bg-light">
     <div  v-for="(job, index) in JobListing" :key="index" class="jobpost card-body row d-flex justify_content-center align-items-center text-center p-3  m-3 border border-muted rounded">
       <div class="justify-content-center align-items-center col-md-1 col-3">
-        <div style="width: 70px; height: 70px" class="rounded">
+        <div style="width: 70px; height: 70px" class="rounded img-fluid">
           <img :src="job.img" alt="company logo" width="70" height="70" class="rounded">
         </div>
       </div>
@@ -23,13 +23,17 @@
             <svg data-v-03976c49="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" aria-label="cash" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-cash b-icon bi"><g data-v-03976c49=""><path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path><path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z"></path></g></svg>
             <span>{{ job.salary }}</span>
           </div>
-          <div class="d-inline-flex col">
+          <div class="d-inline-flex text-truncate col">
             <svg data-v-03976c49="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" aria-label="people" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-people b-icon bi"><g data-v-03976c49=""><path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"></path></g></svg>
-            <span class="d-inline">{{ job.vacant }} <p v-if="show">vacante</p> </span>
+            <span class="d-inline">
+              {{ job.vacant }}
+              <span v-if="job.vacant === 1" class="ml-1">vacante</span>
+              <span v-else class="ml-1">vacantes</span>
+            </span>
           </div>
           <div class="text-truncate col">
             <svg data-v-03976c49="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" aria-label="calendar3" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-calendar3 b-icon bi"><g data-v-03976c49=""><path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"></path><path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path></g></svg>
-            <span>{{ job.date }}</span>
+            <span class="job-date">{{ job.date }}</span>
           </div>
         </div>
       </div>
@@ -49,7 +53,7 @@ export default {
           company: "OFFIMÉDICAS S.A",
           city: "Santiago de Cali",
           salary: "$ 1.9M COP",
-          vacant: "10",
+          vacant: 10,
           date: "2023-02-25",
         },
         {
@@ -58,7 +62,7 @@ export default {
           company: "Fourier Analytics",
           city: "Remoto en Colombia",
           salary: "$ 6.5M - 8M COP",
-          vacant: "1",
+          vacant: 5,
           date: "2023-03-25",
         },
         {
@@ -67,7 +71,7 @@ export default {
           company: "Aventior Inc",
           city: "Remoto",
           salary: "$ 4M - 6.1M COP",
-          vacant: "1",
+          vacant: 1,
           date: "2023-01-05",
         },
       ],
@@ -115,6 +119,12 @@ p {
 }
 .jobitems {
   text-align: left;
+}
+
+.jobitems {
+  text-align: left;
+  display: flex; /* Utiliza flexbox */
+  align-items: center; /* Centra verticalmente el contenido */
 }
 
 .jobpost:hover {
